@@ -157,7 +157,7 @@ public class Classroom extends World
         nakulsoneji.assignSeat();
         
         AnweshaGhosh anweshaghosh = new AnweshaGhosh();
-        addObject(anweshaghosh,6,3);
+        addObject(anweshaghosh,9,7);
         anweshaghosh.assignSeat();
   
     }

@@ -67,12 +67,12 @@ public class AnweshaGhosh extends Student implements StudentAthlete
                 sayName(soundFile);
             
                 mySport("I like run track, specializing in the 400m!");
+                myMajor("I want to be a bioengineer, focusing on bioenergy production");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
-           
+                waitingforbell();  // hanging out by the door
                 sitDown();
             }
         
@@ -96,39 +96,37 @@ public class AnweshaGhosh extends Student implements StudentAthlete
      * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
+    public void waitingforbell(){
         setLocation(0,0);
          Greenfoot.delay(10);
-        // move right
-        for (int i=1;i<=9;i++){
+        for (int j=1;j<=5;j++){
+            j++;
+            for (int i=1;i<=5;i++){
             setLocation(i,0);
             Greenfoot.delay(10);
-        }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
+            }
               // move Forward
-        for (int i=5;i>=0;i--){
+            for (int i=5;i>=0;i--){
             setLocation(0,i);
             Greenfoot.delay(10);
-        }   
+            }
+        }
+        
+              
+        
            Greenfoot.delay(20);
            returnToSeat();
     }
      /**
-     * myHobby is one of the interfaces provided.  
+     * mySport is one of the interfaces provided.  
      * An interface is just a contract for the methods that you will implement in your code.  The College Board no longer
      * tests on abstract classes and interfaces, but it is good to know about them
      */
      public void mySport(String s) {
          System.out.println(s);
+        }         
+    public void myMajor(String m) {
+         System.out.println(m); //table group method
 }
 
 }
