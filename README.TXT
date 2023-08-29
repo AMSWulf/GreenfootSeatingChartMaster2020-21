@@ -14,7 +14,7 @@ CONTRIBUTERS:               Kilgore Trout
                             (Add you name here once your code 
                              is added and correct)
 
-USER CLONE INSTRUCTIONS:
+USER INSTRUCTIONS:
 
 
 1) Start git bash (assuming that you are using git bash). 
@@ -24,7 +24,7 @@ NOTE: Each class build-master should fork the main repo to a new repo before sta
 
 3) Clone (first time, each class build-master should fork, so that each class has their own copy) the repository into the directory where git bash is pointing:
 
-    git clone https://github.com/DHS-CP/P3_GreenfootSeatingChartMaster2023-24.git  (this will change based on fork created by build-master(s).
+    git clone https://github.com/DHS-CP/GreenfootSeatingChartMaster2023-24.git  (this will change based on fork created by build-master(s).
 
 NOTE: This should set up all initial conditions for GIT and avoid a lot of confusion.
 
@@ -34,39 +34,26 @@ NOTE: This should set up all initial conditions for GIT and avoid a lot of confu
 
 PLEASE DO NOT COMMIT YOUR FILES IF THEY DO NOT COMPILE LOCALLY!!!!! Work with your build master! I will provide the current version of the seating chart in Canvas, so that you know where you should be seated.
 =====================================================================
-FULL USER INSTRUCTIONS: 
 
-*NOTE: YOU MAY NEED TO LOGIN TO GITHUB AT SOME POINT IN THIS PROCESS AND THERE WILL BE A POPUP THAT SHOWS UP WHERE YOU ENTER YOUR PASSWORD
+git add FirstLast.java
+git add images/firstlast.jpg
+git add sounds/firstlast.wav
 
-1) navigate to your GitHub directory in the git bash terminal using the command: cd [directory goes here without brackets]
+(Files are case sensitive!!!)
 
-2) then clone the repository using the command: git clone https://github.com/DHS-CP/P3_GreenfootSeatingChartMaster2023-24.git
+6) Check to see what has been staged (from the git command line):
 
-3) then navigate to the new cloned folder using the command: cd P3_GreenfootSeatingChartMaster2023-24
+git status
 
-3) configure your GitHub email by using the commands: git config --global user.email “example@email.com”
+7) Commit your changes from the git command line:
 
-4) configure your GitHub username by using the commands: git config --global user.name “exampleUserName”
+git commit -m “adding my files to the repository”
 
-5) Next open the new cloned folder in Greenfoot and make your edits
+8) Push your changes to the remote repository (each period should have their own cloned or branched version to work with.
+Do not commit back to the master repo:
 
-Once you are done editing the Greenfoot file do the following steps:
+git push
 
-6) create and switch to your local branch using the command: git checkout -b [examplebranchname without brackets]
-
-Run the following commands to push your code
-
-7) git add .
-
-8) git commit -m “descriptive message of the commit”
-
-9) git push --set-upstream origin [examplebranchname without brackets]
-
-Next go to github.com and find the repository P3_GreenfootSeatingChartMaster2023-24 and go to the Pull Request window
-
-Click create a pull request and on the top left of the screen, set your base branch to “main” and set your compare branch to “[examplebranchname without brackets]” 
-
-Then create a pull request and add a title and description to your pull request. Finally, create the pull request and await build masters approval
 
 ASSIGNMENT INSTRUCTIONS IN BRIEF
 
