@@ -1,6 +1,6 @@
 #Greenfoot project file
+class.AshmitSethi.image=96153\ (1).jpg
 class.Classroom.image=csa.jpg
-class.JainLaksh.image=kilgoretrout-standing.jpg
 class.KilgoreTrout.image=man01.png
 class.MrKaehms.image=MrKaehms.jpg
 class.NakulSoneji.image=nakulsoneji.jpg
@@ -121,8 +121,8 @@ target11.y=0
 target12.height=70
 target12.name=NakulSoneji
 target12.showInterface=false
-target12.type=ClassTarget
-target12.width=120
+target12.type=InterfaceTarget
+target12.width=140
 target12.x=0
 target12.y=0
 target13.height=70

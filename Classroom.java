@@ -146,6 +146,10 @@ public class Classroom extends World
     private void prepare()
     {
         createDeskLayout();
+        
+        AshmitSethi ashmitsethi = new AshmitSethi();
+        addObject(ashmitsethi, 6,10);
+        ashmitsethi.assignSeat();
         // Each student needs to create their specific instance following the KilgoreTrout example.
         // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
         // and then clicking on the inspect text
