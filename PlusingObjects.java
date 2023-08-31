@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-//Made by william, manning, trey, and sajeevmagesh
+//Made by william, manning, shrey, and sathvik
 
 
 /**
