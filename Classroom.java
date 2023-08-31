@@ -182,6 +182,10 @@ public class Classroom extends World
         LukasSomwong lukassomwong = new LukasSomwong();
         addObject(lukassomwong,5,7);
         lukassomwong.assignSeat();
+        
+        Student thamansuggala = new ThamanSuggala();
+        addObject(thamansuggala,3,3);
+        thamansuggala.assignSeat();
 
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
