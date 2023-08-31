@@ -93,5 +93,29 @@ public class StudentDeskGroup extends Actor
             }
         }
     }
+    
+    /**
+     * Method to choose a random student in class; useful for picking people to answer warmup questions.
+     * Authors: Rohan Vij, 
+     */
+    public static void chooseRandomStudentAndHighlight(World world) {
+        List<Student> students = world.getObjects(Student.class); // Get all student actors in the world
+        Random rand = new Random();
+        
+        // Choose a random student actor from the list
+        if (!students.isEmpty()) {
+            int randomIndex = rand.nextInt(students.size());
+            Student randomStudent = students.get(randomIndex);
+            
+            // Highlight the student in yellow by creating a rectangle
+            int studentSize = 30; // Adjust the size of the rectangle as needed
+            GreenfootImage studentHighlight = new GreenfootImage(studentSize, studentSize);
+            studentHighlight.setColor(Color.YELLOW);
+            studentHighlight.fill();
+            randomStudent.setImage(studentHighlight);
+        } else {
+            System.out.println("No student actors found in the world.");
+        }
+    }
 }
 
