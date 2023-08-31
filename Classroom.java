@@ -179,7 +179,10 @@ public class Classroom extends World
         StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
         StudentDeskGroup.getCurrentStudents(getObjects(Student.class), 7);
-
+        
+        //Test Anwesha, Jasmine, Ria, Lokesh meetTable method
+        
+        StudentDeskGroup.meetTable(getAllStudents(), 3); 
     }
     
     public List<Student> getAllStudents(){

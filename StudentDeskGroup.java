@@ -49,6 +49,58 @@ public class StudentDeskGroup extends Actor
         
     }
     
+    
+    /**
+     * Introduces each student for the table group & makes them stand
+     * The method is called in the Classroom.java file
+     * Table method for table group 3
+     * 
+     * @author Anwesha
+     * @author Ria
+     * @author Jasmine
+     * @author Lokesh
+     * 
+     * @version 1.0 August 30, 2023
+     * 
+     * @param List<Student> table Students - holds 4 Student objects of students at the table
+     * @param int tableNum - the table number of the table group
+     */
+    
+    public static void meetTable(List<Student> students, int tableNum) {
+        
+        System.out.println("Hello! We are table group number " + tableNum + ".");
+        
+        List<Student> tableStudents = new LinkedList<Student>();
+        /** 
+         * first for loop below is from getCurrentStudents
+         * credit to : Sajeev Magesh, Pingyao Liu, Sid Shastri, Aarush
+         */
+        //first for loop
+        //get students of table
+        for (Student student : students){
+            for (int i=0;i<4;i++){
+                if (student.getX()==seatDesks[tableNum-1][i][0] && student.getY()==seatDesks[tableNum-1][i][1]){
+                    tableStudents.add(student);
+                }
+            }  
+        }
+        
+        // introduce and stand for loop
+        for (Student student : tableStudents){
+            String first = student.getFirstName();
+            String last = student.getLastName();
+            System.out.println("I am " + first + " " + last + ".");
+            String standingFile = first.toLowerCase() + last.toLowerCase() + "-standing.jpg";
+            student.setImage(standingFile);
+        }
+        
+        //return to sitting
+        for (Student student : students) {
+            student.sitDown();
+        }
+    }
+    
+    
     /**
      * Method assigns seat coordinates to their respective table numbers and stores them in a 3d array
      * This is called in the Classroom.java file

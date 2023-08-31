@@ -30,7 +30,7 @@ public class RiaKanwar extends Student implements StudentAthlete
         
         // Make sure to name your image files firstlast.jpg, all lowercase!!!
         portraitFile = f.toLowerCase() + l.toLowerCase() + ".jpg";
-        standingFile = firstName.toLowerCase() + lastName.toLowerCase() + "-standing.jpeg";
+        standingFile = firstName.toLowerCase() + lastName.toLowerCase() + "-standing.jpg";
         // Make sure to name your sound files firstlast.wav, all lowercase!!!
         soundFile = f.toLowerCase() + l.toLowerCase()+".wav";
         setImage(portraitFile);
@@ -49,7 +49,7 @@ public class RiaKanwar extends Student implements StudentAthlete
         
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
         portraitFile = firstName.toLowerCase() + lastName.toLowerCase() + ".jpg";
-        standingFile = firstName.toLowerCase() + lastName.toLowerCase() + "-standing.jpeg";
+        standingFile = firstName.toLowerCase() + lastName.toLowerCase() + "-standing.jpg";
         soundFile = firstName.toLowerCase() + lastName.toLowerCase() + ".wav";
         setImage(portraitFile);
         sitting=true;
