@@ -187,9 +187,9 @@ public class Classroom extends World
         addObject(rohanvij, 9, 9);
 
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
-        //StudentDeskGroup.assignSeatsToDeskGroups();
+        StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
-        //StudentDeskGroup.getCurrentStudents(getObjects(Student.class), 7);
+        StudentDeskGroup.getCurrentStudents(getObjects(Student.class), 7);
 
     }
     
