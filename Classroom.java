@@ -161,6 +161,9 @@ public class Classroom extends World
         NakulSoneji nakulsoneji = new NakulSoneji();
         addObject(nakulsoneji,5,10);
         nakulsoneji.assignSeat();
+        AnweshaGhosh anweshaghosh = new AnweshaGhosh();
+        addObject(anweshaghosh,9,7);
+        anweshaghosh.assignSeat();
         AshmitSethi ashmitsethi = new AshmitSethi();
         addObject(ashmitsethi, 6,10);
         ashmitsethi.assignSeat();
@@ -175,8 +178,7 @@ public class Classroom extends World
         TvishaRanjan tvisharanjan = new TvishaRanjan();
         addObject(tvisharanjan,9,10);
         tvisharanjan.assignSeat();
-
-  
+        
         WilliamHan williamhan = new WilliamHan();
         addObject(williamhan,2,7);
         williamhan.assignSeat();
