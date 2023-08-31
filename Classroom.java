@@ -179,6 +179,10 @@ public class Classroom extends World
         addObject(sajeevmagesh,6,4);
         sajeevmagesh.assignSeat();
         
+        AarushShetty aarushshetty = new AarushShetty();
+        addObject(aarushshetty,5,4);
+        aarushshetty.assignSeat();
+        
         PingyaoLiu pingyaoLiu = new PingyaoLiu();
         addObject(pingyaoLiu,6,3);
         pingyaoLiu.assignSeat();
@@ -190,11 +194,17 @@ public class Classroom extends World
         JoshZeng joshzeng = new JoshZeng();
         addObject(joshzeng,2,3);
         joshzeng.assignSeat();
+        RohanVij rohanvij = new RohanVij();
+        addObject(rohanvij, 9, 9);
 
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
         StudentDeskGroup.getCurrentStudents(getObjects(Student.class), 7);
+        
+        // Test Rohan V, xxxx, xxxx, xxxx
+        // Table method to get a random student and highlight their name
+        StudentDeskGroup.chooseRandomStudentAndHighlight(this);
 
     }
     
@@ -204,14 +214,6 @@ public class Classroom extends World
     }
     
     
-    /**
-     * Sajeev,Pingyao,Sid,Aarush Table Group Method
-     * 
-     * Gets the names of all the students in a table group
-     * 
-     * To adapt and use for your table, add an if statement for your tablegroupnumber 
-     * and get each x,y coordinate of each tablemate
-     */
   
     /**
      * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
