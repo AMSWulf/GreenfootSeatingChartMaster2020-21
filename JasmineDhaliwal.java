@@ -41,8 +41,8 @@ public class JasmineDhaliwal extends Student implements SpecialInterestOrHobby
     public JasmineDhaliwal() {
         firstName="Jasmine";
         lastName="Dhaliwal";
-        mySeatX=6;
-        mySeatY=3;
+        mySeatX=9;
+        mySeatY=6;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".png";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.png";
