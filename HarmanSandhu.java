@@ -42,8 +42,8 @@ public class HarmanSandhu extends Student implements SpecialInterestOrHobby
     public HarmanSandhu() {
         firstName="Harman";
         lastName="Sandhu";
-        mySeatX=1;
-        mySeatY=1;
+        mySeatX=6;
+        mySeatY=9;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
