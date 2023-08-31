@@ -128,7 +128,6 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
             Greenfoot.delay(1);
         }
         
-        getWorld().removeObject(image);
         returnToSeat();
     }
      /**
