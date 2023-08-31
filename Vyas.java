@@ -13,7 +13,7 @@ public class Vyas extends Student
         mySeatX = r;
         mySeatY = s;
         portraitFile = "Springtrapicon.jpg";
-        soundFile = "fnafjumpscare.mp3";
+        soundFile = "fnafjumpscare.wav";
         setImage(portraitFile);
         sitting = true;
         setLocation(mySeatX, mySeatY);
@@ -24,7 +24,7 @@ public class Vyas extends Student
         mySeatX = 2;
         mySeatY = 1;
         portraitFile = "Springtrapicon.jpg";
-        soundFile = "fnafjumpscare.mp3";
+        soundFile = "fnafjumpscare.wav";
         setImage(portraitFile);
         sitting = true;
         setLocation(mySeatX, mySeatY);
