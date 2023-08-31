@@ -21,8 +21,8 @@ public class StudentDesk extends Actor
         if (i>0 && i<9)
            deskGroup=i;
         }
-     public int getDeskGroup(){
+    public int getDeskGroup(){
         
            return deskGroup;
-        }
+    }
 }
