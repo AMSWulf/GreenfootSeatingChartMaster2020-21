@@ -32,6 +32,12 @@ public class StudentDeskGroup extends Actor
     
     /**
      * Gets and prints all student names in a given table group. 
+
+     * This works by iterating through students and using getter methods to get their first and last names. 
+
+     * List<Student> students is the list of all students in the classroom 
+
+     * int deskGroup used to get the students who are in that group 
      * The method is called in the Classroom.java file
      * 
      * Created by: Sajeev Magesh, Pingyao Liu, Sid Shastri, Aarush
@@ -49,6 +55,57 @@ public class StudentDeskGroup extends Actor
         
     }
     
+    
+    /**
+     * Introduces each student for the table group & makes them stand
+     * The method is called in the Classroom.java file
+     * Table method for table group 3
+     * 
+     * @author Anwesha
+     * @author Ria
+     * @author Jasmine
+     * @author Lokesh
+     * 
+     * @version 1.0 August 30, 2023
+     * 
+     * @param List<Student> table Students - holds 4 Student objects of students at the table
+     * @param int tableNum - the table number of the table group
+     */
+    
+    public static void meetTable(List<Student> students, int tableNum) {
+        
+        System.out.println("Hello! We are table group number " + tableNum + ".");
+        
+        List<Student> tableStudents = new LinkedList<Student>();
+        /** 
+         * first for loop below is from getCurrentStudents
+         * credit to : Sajeev Magesh, Pingyao Liu, Sid Shastri, Aarush
+         */
+        //first for loop
+        //get students of table
+        for (Student student : students){
+            for (int i=0;i<4;i++){
+                if (student.getX()==seatDesks[tableNum-1][i][0] && student.getY()==seatDesks[tableNum-1][i][1]){
+                    tableStudents.add(student);
+                }
+            }  
+        }
+        
+        // introduce and stand for loop
+        for (Student student : tableStudents){
+            String first = student.getFirstName();
+            String last = student.getLastName();
+            System.out.println("I am " + first + " " + last + ".");
+            String standingFile = first.toLowerCase() + last.toLowerCase() + "-standing.jpg";
+            student.setImage(standingFile);
+            Greenfoot.delay(20);
+        }
+        
+        //return to sitting
+        for (Student student : students) {
+            student.sitDown();
+        }
+    }
     
     
     /**
@@ -85,6 +142,32 @@ public class StudentDeskGroup extends Actor
                     seatDesks[i][j][1]= baseCoords.get(i).get(1)+1;
                 }
             }
+        }
+    }
+    
+    /**
+     * Method to choose a random student in class; useful for picking people to answer warmup questions.
+     * Authors: Rohan Vij, 
+     */
+    public static void chooseRandomStudentAndHighlight(World world) {
+        List<Student> students = world.getObjects(Student.class); // Get all student actors in the world
+        // Have to pass in world because the class is static
+        Random rand = new Random();
+        
+        // Choose a random student actor from the list
+        if (!students.isEmpty()) {
+            int randomIndex = rand.nextInt(students.size());
+            Student randomStudent = students.get(randomIndex);
+            
+            // Highlight the student in yellow by creating a rectangle
+            int studentSize = 30; // Adjust the size of the rectangle as needed
+            // TODO: make rectangle transparent instead of adjusting size
+            GreenfootImage studentHighlight = new GreenfootImage(studentSize, studentSize);
+            studentHighlight.setColor(Color.YELLOW);
+            studentHighlight.fill();
+            randomStudent.setImage(studentHighlight);
+        } else {
+            System.out.println("No student actors found in the world.");
         }
     }
 }
