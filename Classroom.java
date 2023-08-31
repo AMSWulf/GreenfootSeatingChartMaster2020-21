@@ -198,6 +198,10 @@ public class Classroom extends World
         StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
         StudentDeskGroup.getCurrentStudents(getObjects(Student.class), 7);
+        
+        // Test Rohan V, xxxx, xxxx, xxxx
+        // Table method to get a random student and highlight their name
+        StudentDeskGroup.chooseRandomStudentAndHighlight(this);
 
     }
     
