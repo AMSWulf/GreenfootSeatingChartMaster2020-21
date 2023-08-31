@@ -179,6 +179,10 @@ public class Classroom extends World
         addObject(sajeevmagesh,6,4);
         sajeevmagesh.assignSeat();
         
+        AarushShetty aarushshetty = new AarushShetty();
+        addObject(aarushshetty,5,4);
+        aarushshetty.assignSeat();
+        
         PingyaoLiu pingyaoLiu = new PingyaoLiu();
         addObject(pingyaoLiu,6,3);
         pingyaoLiu.assignSeat();
@@ -200,14 +204,6 @@ public class Classroom extends World
     }
     
     
-    /**
-     * Sajeev,Pingyao,Sid,Aarush Table Group Method
-     * 
-     * Gets the names of all the students in a table group
-     * 
-     * To adapt and use for your table, add an if statement for your tablegroupnumber 
-     * and get each x,y coordinate of each tablemate
-     */
   
     /**
      * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
