@@ -39,8 +39,8 @@ public class SajeevMagesh extends Student implements SpecialInterestOrHobby
      * of the classroom.
      */
     public SajeevMagesh() {
-        firstName="Kilgore";
-        lastName="Trout";
+        firstName="Sajeev";
+        lastName="Magesh";
         mySeatX=1;
         mySeatY=1;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
@@ -99,6 +99,8 @@ public class SajeevMagesh extends Student implements SpecialInterestOrHobby
     public void circleClass(){
         setLocation(0,0);
          Greenfoot.delay(10);
+         
+        
         // move right
         for (int i=1;i<=9;i++){
             setLocation(i,0);
@@ -110,15 +112,27 @@ public class SajeevMagesh extends Student implements SpecialInterestOrHobby
             Greenfoot.delay(10);
         }      
          // move left
+        setImage("sajeevmagesh-soccerball.png");
         for (int i=9;i>=0;i--){
             setLocation(i,5);
             Greenfoot.delay(10);
-        }      
+        }
+        
               // move Forward
         for (int i=5;i>=0;i--){
             setLocation(0,i);
             Greenfoot.delay(10);
-        }   
+        }
+        
+        for (int i=1;i<=5;i++){
+            setLocation(0,i);
+            Greenfoot.delay(10);
+        }
+        setImage("sajeevmagesh-standing.jpg");
+        for (int i=1;i<=6;i++){
+            setLocation(i,5);
+            Greenfoot.delay(10);
+        }
            Greenfoot.delay(20);
            returnToSeat();
     }
