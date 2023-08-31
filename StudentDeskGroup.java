@@ -49,6 +49,8 @@ public class StudentDeskGroup extends Actor
         
     }
     
+    
+    
     /**
      * Method assigns seat coordinates to their respective table numbers and stores them in a 3d array
      * This is called in the Classroom.java file

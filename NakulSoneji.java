@@ -51,6 +51,19 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
         sitting=true;
     }
     
+    public NakulSoneji(int r, int s) {
+        firstName="Nakul";
+        lastName="Soneji";
+        mySeatX=r;
+        mySeatY=s;
+       // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
+        soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
+        setImage(portraitFile);
+        sitting=true;
+    }
+    
      /**
      * Act - do whatever the NakulSoneji actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -96,7 +109,7 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
      * You should write your own methods to perform your own animation for your character/avatar.
      */
     public void bigFireworks() {
-        NakulSoneji image = new NakulSoneji();
+        NakulSoneji image = new NakulSoneji(5, 10);
         
         getWorld().addObject(image, 5, 10);
         image.getWorld().addObject(this, 5, 10);
@@ -114,7 +127,7 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
             image.setLocation((int)(Math.random() * 3) + 5, (int)(Math.random() * 3) + 10);
             Greenfoot.delay(1);
         }
-        getWorld().removeObject(image);
+        
         returnToSeat();
     }
      /**
