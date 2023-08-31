@@ -152,7 +152,6 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
-
         RiaKanwar riakanwar = new RiaKanwar();
         addObject(riakanwar,8,7);
         riakanwar.assignSeat();
@@ -168,7 +167,6 @@ public class Classroom extends World
         WilliamHan williamhan = new WilliamHan();
         addObject(williamhan,2,7);
         williamhan.assignSeat();
-        
         SajeevMagesh sajeevmagesh = new SajeevMagesh();
         addObject(sajeevmagesh,6,4);
         sajeevmagesh.assignSeat();
@@ -180,7 +178,7 @@ public class Classroom extends World
         LukasSomwong lukassomwong = new LukasSomwong();
         addObject(lukassomwong,5,7);
         lukassomwong.assignSeat();
-        
+
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
