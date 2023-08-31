@@ -74,7 +74,7 @@ public class PingyaoLiu extends Student implements SpecialInterestOrHobby
                 setImage(standingFile);
                 System.out.println(""); // Print a blank line to create space between any student output.
                 getName();
-                //sayName(soundFile);
+                sayName(soundFile);
                 
                 myHobby("I like to play piano and violin and learn languages! ");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
