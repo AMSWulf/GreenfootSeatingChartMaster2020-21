@@ -92,6 +92,7 @@ public class StudentDeskGroup extends Actor
             System.out.println("I am " + first + " " + last + ".");
             String standingFile = first.toLowerCase() + last.toLowerCase() + "-standing.jpg";
             student.setImage(standingFile);
+            Greenfoot.delay(20);
         }
         
         //return to sitting

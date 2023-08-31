@@ -109,7 +109,8 @@ public class RiaKanwar extends Student implements StudentAthlete
      */
     public void throwBirdie(){
         String birdie = "badmintonbirdie.png";
-        setImage(birdie);
+        String standing = "riakanwar-standing.jpg";
+        setImage(standing);
         // move down
         for (int i=1;i<=9;i++){
             setLocation(getX()+1,getY()+1);
