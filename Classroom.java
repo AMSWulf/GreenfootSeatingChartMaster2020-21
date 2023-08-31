@@ -103,7 +103,7 @@ public class Classroom extends World
         StudentDesk studentdesk32 = new StudentDesk();
         addObject(studentdesk32,6,10);
         TeacherDesk teacherdesk = new TeacherDesk();
-        addObject(teacherdesk,2,9);
+        addObject(teacherdesk,2,10);
         studentdesk31.setDeskGroup(1);
         studentdesk29.setDeskGroup(1);
         studentdesk30.setDeskGroup(1);
@@ -142,21 +142,50 @@ public class Classroom extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    
+
     private void prepare()
     {
         createDeskLayout();
- // Each student needs to create their specific instance following the KilgoreTrout example.
- // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
- // and then clicking on the inspect text
+        // Each student needs to create their specific instance following the KilgoreTrout example.
+        // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+        // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+
+        RiaKanwar riakanwar = new RiaKanwar();
+        addObject(riakanwar,8,7);
+        riakanwar.assignSeat();
+        
+        NakulSoneji nakulsoneji = new NakulSoneji();
+        addObject(nakulsoneji,5,10);
+        nakulsoneji.assignSeat();
+        
+        ManningWu manningwu = new ManningWu();
+        addObject(manningwu,3,7);
+        manningwu.assignSeat();
+  
+        WilliamHan williamhan = new WilliamHan();
+        addObject(williamhan,2,7);
+        williamhan.assignSeat();
+        
+        SajeevMagesh sajeevmagesh = new SajeevMagesh();
+        addObject(sajeevmagesh,6,4);
+        sajeevmagesh.assignSeat();
+        
+        PingyaoLiu pingyaoLiu = new PingyaoLiu();
+        addObject(pingyaoLiu,6,3);
+        pingyaoLiu.assignSeat();
         
         LukasSomwong lukassomwong = new LukasSomwong();
         addObject(lukassomwong,5,7);
         lukassomwong.assignSeat();
-  
+        
+        // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
+        StudentDeskGroup.assignSeatsToDeskGroups();
+        // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
+        StudentDeskGroup.getCurrentStudents(getObjects(Student.class), 7);
+
     }
     
     public List<Student> getAllStudents(){
@@ -164,6 +193,15 @@ public class Classroom extends World
        return s;
     }
     
+    
+    /**
+     * Sajeev,Pingyao,Sid,Aarush Table Group Method
+     * 
+     * Gets the names of all the students in a table group
+     * 
+     * To adapt and use for your table, add an if statement for your tablegroupnumber 
+     * and get each x,y coordinate of each tablemate
+     */
   
     /**
      * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
