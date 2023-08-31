@@ -163,6 +163,10 @@ public class Classroom extends World
         ManningWu manningwu = new ManningWu();
         addObject(manningwu,3,7);
         manningwu.assignSeat();
+        TvishaRanjan tvisharanjan = new TvishaRanjan();
+        addObject(tvisharanjan,9,10);
+        tvisharanjan.assignSeat();
+
   
         WilliamHan williamhan = new WilliamHan();
         addObject(williamhan,2,7);
