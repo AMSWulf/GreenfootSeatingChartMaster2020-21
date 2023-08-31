@@ -1,18 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The HarmanSandhu class can be used as a model for your own class that represents you and your seating location in AP CSA
+ * The KilgoreTrout class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
- * @author Harman S
+ * @author Mr. Kaehms
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class HarmanSandhu extends Student implements SpecialInterestOrHobby
-
+public class ShreyaShingare extends Student implements SpecialInterestOrHobby
 {
 
     /**
-     * Constructor for the HarmanSandhu class.
+     * Constructor for the KilgoreTrout class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
@@ -23,7 +22,7 @@ public class HarmanSandhu extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public HarmanSandhu(String f, String l, int r, int s) {
+    public ShreyaShingare(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         mySeatX=r;
@@ -39,11 +38,11 @@ public class HarmanSandhu extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public HarmanSandhu() {
-        firstName="Harman";
-        lastName="Sandhu";
-        mySeatX=6;
-        mySeatY=9;
+    public ShreyaShingare() {
+        firstName="Shreya";
+        lastName="Shingare";
+        mySeatX=1;
+        mySeatY=1;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
@@ -53,10 +52,9 @@ public class HarmanSandhu extends Student implements SpecialInterestOrHobby
     }
     
      /**
-     * Act - do whatever the HarmanSandhu actor wants to do. This method is called whenever
+     * Act - do whatever the KilgoreTrout actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
-     */ 
-    /*
+     */   
     public void act() 
     {
         // Add your action code here.
@@ -68,55 +66,18 @@ public class HarmanSandhu extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to listen to music!");
+                myHobby("Hi! My name is Shreya Shingare and in my free time I like to bake, hike, bike, hang out with my friends, and binge watch movies!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
                 circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
-           
+                moveStar();
                 sitDown();
             }
         
     } 
-    */
-    public void act() {
-    if (Greenfoot.mouseClicked(this)) {
-        sitting = false;
-        setImage(standingFile);
-        System.out.println(""); 
-        getName();
-        sayName(soundFile);
-
-        myHobby("I like to listen to music!");
-
-        
-        int centerX = getWorld().getWidth() / 2;
-        int centerY = getWorld().getHeight() / 2;
-        int radius = Math.min(centerX, centerY) - 20;
-        int numFrames = 360; 
-        int animationDuration = 400; 
-
-        for (int frame = 0; frame < numFrames; frame++) {
-            double angle = Math.toRadians((double) frame * 2);
-            int x = centerX + (int) (radius * Math.cos(angle));
-            int y = centerY + (int) (radius * Math.sin(angle));
-
-            setLocation(x, y);
-            setRotation(frame * 10); // yhis is to adjst the rotation speed
-
-            Greenfoot.delay(animationDuration / numFrames); 
-            }
-
-        setLocation(mySeatX, mySeatY);
-        setRotation(0); 
-        Greenfoot.delay(20);
-
-        sitDown();
-        }
-    }
-
-
+    
     /**
      * Prints the first and last name to the console
      */
@@ -132,7 +93,7 @@ public class HarmanSandhu extends Student implements SpecialInterestOrHobby
 
    
     /**
-     * This is a local method specific to the HarmanSandhu class used to animate the character once the image is clicked on.
+     * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
     public void circleClass(){
@@ -160,6 +121,22 @@ public class HarmanSandhu extends Student implements SpecialInterestOrHobby
         }   
            Greenfoot.delay(20);
            returnToSeat();
+    }
+    public void moveStar(){
+        setLocation(0,0);
+         Greenfoot.delay(10);
+        for (int i=1; i<=5; i++){
+            setLocation(i,0);
+            Greenfoot.delay(10);
+            turn(144);
+        for (int x=1; x<=5; x++){
+            setLocation(x, 6);
+            Greenfoot.delay(10);
+            turn(144);
+        }
+        }
+        
+        
     }
      /**
      * myHobby is one of the interfaces provided.  
