@@ -5,7 +5,7 @@ public class Vyas extends Student
     private int binaryDropTimer = 0; // Timer for dropping binaries
     private int binaryDropInterval = 100; // Time interval for dropping binaries
     private boolean jumpscareVisible = false;
-    private int jumpscareDuration = 480; // 6 seconds at 60 frames per second
+    private int jumpscareDuration = 480; // 8 seconds at 60 frames per second
 
     public Vyas(String f, String l, int r, int s) {
         firstName = f;
@@ -37,11 +37,9 @@ public class Vyas extends Student
         if (Greenfoot.mouseClicked(this)) {
             sitting = false;
             sayName(soundFile);
-            getName();
 
             // Show the jumpscare image
-            GifImage myGif = new GifImage("jumpscare3.gif");
-            setImage(myGif.getCurrentImage());
+            setImage("jumpscare3.png"); // Set the image to the jumpscare image
             setLocation(getWorld().getWidth() / 2, getWorld().getHeight() / 2); // Center the image
             jumpscareVisible = true;
             jumpscareDuration = 480; // Reset the jumpscare duration
