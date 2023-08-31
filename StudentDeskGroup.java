@@ -32,6 +32,12 @@ public class StudentDeskGroup extends Actor
     
     /**
      * Gets and prints all student names in a given table group. 
+
+     * This works by iterating through students and using getter methods to get their first and last names. 
+
+     * List<Student> students is the list of all students in the classroom 
+
+     * int deskGroup used to get the students who are in that group 
      * The method is called in the Classroom.java file
      * 
      * Created by: Sajeev Magesh, Pingyao Liu, Sid Shastri, Aarush
@@ -136,6 +142,32 @@ public class StudentDeskGroup extends Actor
                     seatDesks[i][j][1]= baseCoords.get(i).get(1)+1;
                 }
             }
+        }
+    }
+    
+    /**
+     * Method to choose a random student in class; useful for picking people to answer warmup questions.
+     * Authors: Rohan Vij, 
+     */
+    public static void chooseRandomStudentAndHighlight(World world) {
+        List<Student> students = world.getObjects(Student.class); // Get all student actors in the world
+        // Have to pass in world because the class is static
+        Random rand = new Random();
+        
+        // Choose a random student actor from the list
+        if (!students.isEmpty()) {
+            int randomIndex = rand.nextInt(students.size());
+            Student randomStudent = students.get(randomIndex);
+            
+            // Highlight the student in yellow by creating a rectangle
+            int studentSize = 30; // Adjust the size of the rectangle as needed
+            // TODO: make rectangle transparent instead of adjusting size
+            GreenfootImage studentHighlight = new GreenfootImage(studentSize, studentSize);
+            studentHighlight.setColor(Color.YELLOW);
+            studentHighlight.fill();
+            randomStudent.setImage(studentHighlight);
+        } else {
+            System.out.println("No student actors found in the world.");
         }
     }
 }

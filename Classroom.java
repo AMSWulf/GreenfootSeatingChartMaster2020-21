@@ -146,35 +146,64 @@ public class Classroom extends World
     private void prepare()
     {
         createDeskLayout();
+        
+        
         // Each student needs to create their specific instance following the KilgoreTrout example.
         // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
         // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
-        
         RiaKanwar riakanwar = new RiaKanwar();
         addObject(riakanwar,8,7);
-        riakanwar.assignSeat();       
+        riakanwar.assignSeat();
+        
         NakulSoneji nakulsoneji = new NakulSoneji();
         addObject(nakulsoneji,5,10);
         nakulsoneji.assignSeat();
+        AnweshaGhosh anweshaghosh = new AnweshaGhosh();
+        addObject(anweshaghosh,9,7);
+        anweshaghosh.assignSeat();
+        AshmitSethi ashmitsethi = new AshmitSethi();
+        addObject(ashmitsethi, 6,10);
+        ashmitsethi.assignSeat();
+        KrishaSoneji krishasoneji = new KrishaSoneji();
+        addObject(krishasoneji, 5, 9);
+        HarmanSandhu harmansandhu = new HarmanSandhu();
+        addObject(harmansandhu, 6, 9);
+        
         ManningWu manningwu = new ManningWu();
         addObject(manningwu,3,7);
         manningwu.assignSeat();
-  
+        TvishaRanjan tvisharanjan = new TvishaRanjan();
+        addObject(tvisharanjan,9,10);
+        tvisharanjan.assignSeat();
+        
         WilliamHan williamhan = new WilliamHan();
         addObject(williamhan,2,7);
         williamhan.assignSeat();
-        
-
         SajeevMagesh sajeevmagesh = new SajeevMagesh();
         addObject(sajeevmagesh,6,4);
         sajeevmagesh.assignSeat();
+        
+        AarushShetty aarushshetty = new AarushShetty();
+        addObject(aarushshetty,5,4);
+        aarushshetty.assignSeat();
+        
         PingyaoLiu pingyaoLiu = new PingyaoLiu();
         addObject(pingyaoLiu,6,3);
         pingyaoLiu.assignSeat();
         
+        LukasSomwong lukassomwong = new LukasSomwong();
+        addObject(lukassomwong,5,7);
+        lukassomwong.assignSeat();
+        
+        JoshZeng joshzeng = new JoshZeng();
+        addObject(joshzeng,2,3);
+        joshzeng.assignSeat();
+        RohanVij rohanvij = new RohanVij();
+        addObject(rohanvij, 9, 9);
+
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
@@ -183,6 +212,9 @@ public class Classroom extends World
         //Test Anwesha, Jasmine, Ria, Lokesh meetTable method
         
         StudentDeskGroup.meetTable(getAllStudents(), 3); 
+        // Test Rohan V, xxxx, xxxx, xxxx
+        // Table method to get a random student and highlight their name
+        //StudentDeskGroup.chooseRandomStudentAndHighlight(this);
     }
     
     public List<Student> getAllStudents(){
@@ -191,14 +223,6 @@ public class Classroom extends World
     }
     
     
-    /**
-     * Sajeev,Pingyao,Sid,Aarush Table Group Method
-     * 
-     * Gets the names of all the students in a table group
-     * 
-     * To adapt and use for your table, add an if statement for your tablegroupnumber 
-     * and get each x,y coordinate of each tablemate
-     */
   
     /**
      * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
