@@ -97,30 +97,69 @@ public class AshmitSethi extends Student implements SpecialInterestOrHobby
      * You should write your own methods to perform your own animation for your character/avatar.
      */
     public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
         // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
+        for (int i=6;i<=10;i++){
+            setLocation(i,11);
             Greenfoot.delay(10);
+            turn(90);
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
+              // move Forward
+        for (int i=11;i>=2;i--){
+            setLocation(11,i);
             Greenfoot.delay(10);
-        }      
+            turn(-90);
+        }
          // move left
-        for (int i=9;i>=0;i--){
+        for (int i=11;i>=1;i--){
+            setLocation(i,2);
+            Greenfoot.delay(10);
+            turn(90);
+        } 
+        // move back
+        for (int i=2;i<=5;i++){
+            setLocation(1,i);
+            Greenfoot.delay(10);
+            turn(-90);
+        } 
+        // move right
+        for (int i=2;i<=10;i++){
             setLocation(i,5);
             Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
+            turn(90);
+        }
+        // move back
+        for (int i=5;i<=8;i++){
+            setLocation(10,i);
             Greenfoot.delay(10);
-        }   
+            turn(-90);
+        } 
+         // move left
+        for (int i=11;i>=1;i--){
+            setLocation(i,8);
+            Greenfoot.delay(10);
+            turn(90);
+        } 
+        // move back
+        for (int i=8;i<=12;i++){
+            setLocation(1,i);
+            Greenfoot.delay(10);
+            turn(-90);
+        } 
+         // move right
+        for (int i=1;i<=10;i++){
+            setLocation(i,12);
+            Greenfoot.delay(10);
+            turn(90);
+        }
+         // move left
+        for (int i=10;i>=6;i--){
+            setLocation(i,11);
+            Greenfoot.delay(10);
+            turn(90);
+        } 
            Greenfoot.delay(20);
            returnToSeat();
+           
     }
      /**
      * myHobby is one of the interfaces provided.  
