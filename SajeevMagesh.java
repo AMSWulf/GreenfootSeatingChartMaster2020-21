@@ -39,8 +39,8 @@ public class SajeevMagesh extends Student implements SpecialInterestOrHobby
      * of the classroom.
      */
     public SajeevMagesh() {
-        firstName="Kilgore";
-        lastName="Trout";
+        firstName="Sajeev";
+        lastName="Magesh";
         mySeatX=1;
         mySeatY=1;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
