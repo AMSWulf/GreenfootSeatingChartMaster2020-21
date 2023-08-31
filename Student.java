@@ -33,8 +33,43 @@ public abstract class Student extends Actor
     }
     
     public abstract void  getName(); //This is an abstract methods. You will have to implement it
-                                     // in your own class file. See KilgoreTrout for an example
- 
+                                 // in your own class file. See KilgoreTrout for an example
+     /**
+     * 
+     * Will temporarily swap the desk seating position of two Student instances and will move them there
+     * 
+     * DOES NOT change the "mySeatX" and "mySeatY" instance variables, so ".sitdown()" CAN be used to return to original seats
+     * 
+     * @author Nakul Soneji, Krisha Soneji, Harmandeep Sandhu, Ashmit Sethi
+     * @param other a student object that you wish to switch seats with
+     */               
+     public void tempSwapSeats(Student other) {
+         int tempX = this.GetSeatX();
+         int tempY = this.GetSeatY();
+         this.setLocation(other.GetSeatX(), other.GetSeatY());
+         other.setLocation(tempX, tempY);
+     }
+     /**
+     * 
+     * Will permanently swap the desk seating position of two Student instances and will move them there
+     * 
+     * DOES change the "mySeatX" and "mySeatY" instance variables, so ".sitdown()" CANNOT be used to return to original seats
+     * 
+     * @author Nakul Soneji, Krisha Soneji, Harmandeep Sandhu, Ashmit Sethi
+     * @param other a student object that you wish to switch seats with
+     */               
+     public void swapSeats(Student other) {
+         int tempX = this.GetSeatX();
+         int tempY = this.GetSeatY();
+         
+         this.mySeatX = other.GetSeatX();
+         this.mySeatY = other.GetSeatY();
+         other.mySeatX = tempX;
+         other.mySeatY = tempY;
+         
+         this.sitDown();
+         other.sitDown();
+     }
     /**
      * Plays a sound file when called
      * @param String myNameFile  is the name of the sound file to play, ex "mySound.wav",
