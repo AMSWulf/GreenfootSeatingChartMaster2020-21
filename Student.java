@@ -33,8 +33,55 @@ public abstract class Student extends Actor
     }
     
     public abstract void  getName(); //This is an abstract methods. You will have to implement it
-                                     // in your own class file. See KilgoreTrout for an example
- 
+                                 // in your own class file. See KilgoreTrout for an example
+     /** Description of tempSwapSeats(Student other)
+     * 
+     * Will temporarily swap the desk seating position of two Student instances and move them there
+     * 
+     * DOES NOT change the "mySeatX" and "mySeatY" instance variables, so ".sitdown()" CAN be used to return to original seats
+     * 
+     * @author Nakul Soneji
+     * @author Krisha Soneji 
+     * @author Harmandeep Sandhu
+     * @author Ashmit Sethi
+     * @version v0.1 Aug 30, 2023
+     * 
+     * @param other a student object that you wish to switch seats with
+     * @return void the function does not return anything
+     */               
+     public void tempSwapSeats(Student other) {
+         int tempX = this.GetSeatX();
+         int tempY = this.GetSeatY();
+         this.setLocation(other.GetSeatX(), other.GetSeatY());
+         other.setLocation(tempX, tempY);
+     }
+     /** Description of swapSeats(Student other)
+     * 
+     * Will permanently swap the desk seating position of two Student instances and move them there
+     * 
+     * DOES change the "mySeatX" and "mySeatY" instance variables, so ".sitdown()" CANNOT be used to return to original seats
+     * 
+     * @author Nakul Soneji
+     * @author Krisha Soneji 
+     * @author Harmandeep Sandhu
+     * @author Ashmit Sethi
+     * @version v0.1 Aug 30, 2023
+     * 
+     * @param other a student object that you wish to switch seats with
+     * @return void the function does not return anything
+     */                
+     public void swapSeats(Student other) {
+         int tempX = this.GetSeatX();
+         int tempY = this.GetSeatY();
+         
+         this.mySeatX = other.GetSeatX();
+         this.mySeatY = other.GetSeatY();
+         other.mySeatX = tempX;
+         other.mySeatY = tempY;
+         
+         this.sitDown();
+         other.sitDown();
+     }
     /**
      * Plays a sound file when called
      * @param String myNameFile  is the name of the sound file to play, ex "mySound.wav",

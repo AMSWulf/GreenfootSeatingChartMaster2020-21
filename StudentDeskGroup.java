@@ -32,6 +32,12 @@ public class StudentDeskGroup extends Actor
     
     /**
      * Gets and prints all student names in a given table group. 
+
+     * This works by iterating through students and using getter methods to get their first and last names. 
+
+     * List<Student> students is the list of all students in the classroom 
+
+     * int deskGroup used to get the students who are in that group 
      * The method is called in the Classroom.java file
      * 
      * Created by: Sajeev Magesh, Pingyao Liu, Sid Shastri, Aarush
@@ -48,6 +54,8 @@ public class StudentDeskGroup extends Actor
         }
         
     }
+    
+    
     
     /**
      * Method assigns seat coordinates to their respective table numbers and stores them in a 3d array
