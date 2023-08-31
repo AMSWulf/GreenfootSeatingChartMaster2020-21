@@ -114,7 +114,6 @@ public class RohanVij extends Student implements SpecialInterestOrHobby
         int initialY = getY();
         int middleY = (getWorld().getHeight() / 2) - 5;
         
-        System.out.println(middleY);
     
         for (int y = initialY; y > middleY; y--) {
             setLocation(getX(), y);
@@ -189,7 +188,6 @@ public class RohanVij extends Student implements SpecialInterestOrHobby
         
         for (int i = 0; i < numberOfStars; i++) {
             int x = Greenfoot.getRandomNumber(getWorld().getWidth());
-            System.out.println(x);
             int y = Greenfoot.getRandomNumber(getWorld().getHeight());
             
             // Randomly select star color (yellow or white)

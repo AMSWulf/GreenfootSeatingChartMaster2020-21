@@ -209,7 +209,7 @@ public class Classroom extends World
         
         // Test Rohan V, xxxx, xxxx, xxxx
         // Table method to get a random student and highlight their name
-        StudentDeskGroup.chooseRandomStudentAndHighlight(this);
+        //StudentDeskGroup.chooseRandomStudentAndHighlight(this);
 
     }
     

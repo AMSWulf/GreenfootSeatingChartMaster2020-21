@@ -100,6 +100,7 @@ public class StudentDeskGroup extends Actor
      */
     public static void chooseRandomStudentAndHighlight(World world) {
         List<Student> students = world.getObjects(Student.class); // Get all student actors in the world
+        // Have to pass in world because the class is static
         Random rand = new Random();
         
         // Choose a random student actor from the list
@@ -109,6 +110,7 @@ public class StudentDeskGroup extends Actor
             
             // Highlight the student in yellow by creating a rectangle
             int studentSize = 30; // Adjust the size of the rectangle as needed
+            // TODO: make rectangle transparent instead of adjusting size
             GreenfootImage studentHighlight = new GreenfootImage(studentSize, studentSize);
             studentHighlight.setColor(Color.YELLOW);
             studentHighlight.fill();
