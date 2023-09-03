@@ -175,7 +175,7 @@ public class Classroom extends World
         addObject(krishasoneji, 5, 9);
         HarmanSandhu harmansandhu = new HarmanSandhu();
         addObject(harmansandhu, 6, 9);
-        SatviKumar satvikumar = new SatviKumar();
+        SathviKumar satvikumar = new SathviKumar();
         addObject(satvikumar, 3, 7);
         ManningWu manningwu = new ManningWu();
         addObject(manningwu,3,7);
@@ -208,6 +208,10 @@ public class Classroom extends World
         joshzeng.assignSeat();
         RohanVij rohanvij = new RohanVij();
         addObject(rohanvij, 9, 9);
+        
+        JainLaksh lakshjain = new JainLaksh();
+        addObject(lakshjain, 8, 4);
+        lakshjain.assignSeat();
 
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
