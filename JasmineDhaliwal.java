@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class JainLaksh extends Student implements SpecialInterestOrHobby
+public class JasmineDhaliwal extends Student implements SpecialInterestOrHobby
 {
 
     /**
@@ -22,13 +22,13 @@ public class JainLaksh extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public JainLaksh(String f, String l, int r, int s) {
+    public JasmineDhaliwal(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         mySeatX=r;
         mySeatY=s;
-        portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
-        standingFile=f.toLowerCase()+ l.toLowerCase()+"-standing.jpg";
+        portraitFile=f.toLowerCase()+l.toLowerCase()+".png";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
+        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.png";
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
         sitting=true;
@@ -38,14 +38,14 @@ public class JainLaksh extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public JainLaksh() {
-        firstName="Laksh";
-        lastName="Jain";
-        mySeatX=1;
-        mySeatY=1;
+    public JasmineDhaliwal() {
+        firstName="Jasmine";
+        lastName="Dhaliwal";
+        mySeatX=9;
+        mySeatY=6;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"standing.jpg";
+       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".png";
+       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.png";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
         setImage(portraitFile);
         sitting=true;
@@ -66,12 +66,12 @@ public class JainLaksh extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to play tennis!");
+                myHobby("I like to run!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                flipClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
            
                 sitDown();
             }
@@ -96,27 +96,89 @@ public class JainLaksh extends Student implements SpecialInterestOrHobby
      * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
-        // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
+    public void flipClass(){
+    GreenfootImage originalImage = new GreenfootImage(standingFile);
+    int angle = 0; //  rotation angle
+    int frameCount = 0; // Frame counter
+    int startY = getY(); // Store the Y coordinate
+    boolean flipping = true; // To control the flipping 
+
+    setLocation(getX(), startY); // Set location
+    Greenfoot.delay(10);
+
+    int animationDurationInFrames = 2; 
+    int rotationIncrement = 10; 
+
+    while (frameCount < animationDurationInFrames) {
+        setImage(standingFile); //  back to the original image
+        setLocation(mySeatX, mySeatY); // Move back to the seat
+        flipping = true;
+        for(int i=mySeatY;i<=10;i++){
+        if (flipping) {
+            setImage(originalImage); // Set original image
+            getImage().mirrorVertically(); // Flip  image
+
+            // Move the image up and down on the spot
+            //int newY = startY + (int) (Math.sin(Math.toRadians(angle)) * 5); 
+            setLocation(getX(), i);
+
+            angle += rotationIncrement; // Increment rotation
+
+            if (angle >= 360) {
+                angle -= 360; // Reset rotation angle if it goes above 360 degrees
+            }
+        } else {
+            setImage(standingFile); //  back to the original image
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(10,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=8;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
-        setLocation(8,4);
-           Greenfoot.delay(20);
-           returnToSeat();
+
+        Greenfoot.delay(10);
+        
+
+        if (i%2==0) {
+            flipping = false; // Stop flipping after half of the time
+            //setImage(standingFile); //  back to the original image
+            //setLocation(mySeatX, mySeatY); // Move back to the seat
+        }
+        else{
+            flipping = true;
+        }
+    }
+    for(int i=getY();i>1;i--){
+        if (flipping) {
+            setImage(originalImage); // Set original image
+            getImage().mirrorVertically(); // Flip  image
+
+            // Move the image up and down on the spot
+            //int newY = startY + (int) (Math.sin(Math.toRadians(angle)) * 5); 
+            setLocation(getX(), i);
+
+            angle += rotationIncrement; // Increment rotation
+
+            if (angle >= 360) {
+                angle -= 360; // Reset rotation angle if it goes above 360 degrees
+            }
+        } else {
+            setImage(standingFile); //  back to the original image
+        }
+
+        Greenfoot.delay(10);
+        
+
+        if (i%2==0) {
+            flipping = false; // Stop flipping after half of the time
+            //setImage(standingFile); //  back to the original image
+            //setLocation(mySeatX, mySeatY); // Move back to the seat
+        }
+        else{
+            flipping = true;
+        }
+    }
+        
+        frameCount++; // Increment frame 
+    }
+
+    //Greenfoot.delay(20);
+    returnToSeat();
     }
      /**
      * myHobby is one of the interfaces provided.  
@@ -125,6 +187,6 @@ public class JainLaksh extends Student implements SpecialInterestOrHobby
      */
      public void myHobby(String s) {
          System.out.println(s);
-}
+    }
 
 }

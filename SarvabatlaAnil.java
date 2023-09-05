@@ -15,8 +15,10 @@ public class SarvabatlaAnil extends Student
     public void act()
     {
         // Add your action code here.
+        setImage(AnilSarvabatla.png);
         if(Greenfoot.mouseClicked(this)){
             getName();
+            sayName(AnilSarvabatla.wav);
             myHobby();
             World world;
             world = getWorld();

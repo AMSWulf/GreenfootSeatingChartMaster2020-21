@@ -1,17 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.Random;
+
 /**
- * The NakulSoneji class can be used as a model for your own class that represents you and your seating location in AP CSA
+ * The HarmanSandhu class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
- * @author Mr. Kaehms
+ * @author Harman S
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class NakulSoneji extends Student implements SpecialInterestOrHobby
+public class HarmanSandhu extends Student implements SpecialInterestOrHobby
+
 {
 
     /**
-     * Constructor for the NakulSoneji class.
+     * Constructor for the HarmanSandhu class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
@@ -22,7 +23,7 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public NakulSoneji(String f, String l, int r, int s) {
+    public HarmanSandhu(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         mySeatX=r;
@@ -38,24 +39,11 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public NakulSoneji() {
-        firstName="Nakul";
-        lastName="Soneji";
-        mySeatX=5;
-        mySeatY=10;
-       // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
-        soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
-        setImage(portraitFile);
-        sitting=true;
-    }
-    
-    public NakulSoneji(int r, int s) {
-        firstName="Nakul";
-        lastName="Soneji";
-        mySeatX=r;
-        mySeatY=s;
+    public HarmanSandhu() {
+        firstName="Harman";
+        lastName="Sandhu";
+        mySeatX=6;
+        mySeatY=9;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
@@ -65,9 +53,10 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
     }
     
      /**
-     * Act - do whatever the NakulSoneji actor wants to do. This method is called whenever
+     * Act - do whatever the HarmanSandhu actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
-     */   
+     */ 
+    /*
     public void act() 
     {
         // Add your action code here.
@@ -78,18 +67,56 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
                 System.out.println(""); // Print a blank line to create space between any student output.
                 getName();
                 sayName(soundFile);
-                myHobby("I like pizza");
+            
+                myHobby("I like to listen to music!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                bigFireworks();  // Nakul Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
            
                 sitDown();
             }
         
     } 
-    
+    */
+    public void act() {
+    if (Greenfoot.mouseClicked(this)) {
+        sitting = false;
+        setImage(standingFile);
+        System.out.println(""); 
+        getName();
+        sayName(soundFile);
+
+        myHobby("I like to listen to music!");
+
+        
+        int centerX = getWorld().getWidth() / 2;
+        int centerY = getWorld().getHeight() / 2;
+        int radius = Math.min(centerX, centerY) - 20;
+        int numFrames = 360; 
+        int animationDuration = 400; 
+
+        for (int frame = 0; frame < numFrames; frame++) {
+            double angle = Math.toRadians((double) frame * 2);
+            int x = centerX + (int) (radius * Math.cos(angle));
+            int y = centerY + (int) (radius * Math.sin(angle));
+
+            setLocation(x, y);
+            setRotation(frame * 10); // yhis is to adjst the rotation speed
+
+            Greenfoot.delay(animationDuration / numFrames); 
+            }
+
+        setLocation(mySeatX, mySeatY);
+        setRotation(0); 
+        Greenfoot.delay(20);
+
+        sitDown();
+        }
+    }
+
+
     /**
      * Prints the first and last name to the console
      */
@@ -105,30 +132,34 @@ public class NakulSoneji extends Student implements SpecialInterestOrHobby
 
    
     /**
-     * This is a local method specific to the NakulSoneji class used to animate the character once the image is clicked on.
+     * This is a local method specific to the HarmanSandhu class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void bigFireworks() {
-        NakulSoneji image = new NakulSoneji(5, 10);
-        
-        getWorld().addObject(image, 5, 10);
-        image.getWorld().addObject(this, 5, 10);
-        
-        image.setImage("nakulsoneji-standing.jpg");
-        setImage("fireworks.jpg");
-
-        for (int i = 0; i < 100; i++) {
-            setLocation((int)(Math.random() * 3) + 5, (int)(Math.random() * 3) + 10);
-            Greenfoot.delay(1);
-            image.setLocation((int)(-1 * Math.random() * 3) + 5, (int)(-1 * Math.random() * 3) + 10);
-            Greenfoot.delay(1);
-            setLocation((int)(-1 * Math.random() * 3) + 5, (int)(-1 * Math.random() * 3) + 10);
-            Greenfoot.delay(1);
-            image.setLocation((int)(Math.random() * 3) + 5, (int)(Math.random() * 3) + 10);
-            Greenfoot.delay(1);
+    public void circleClass(){
+        setLocation(0,0);
+         Greenfoot.delay(10);
+        // move right
+        for (int i=1;i<=9;i++){
+            setLocation(i,0);
+            Greenfoot.delay(10);
         }
-        
-        returnToSeat();
+        // move back
+        for (int i=1;i<=5;i++){
+            setLocation(9,i);
+            Greenfoot.delay(10);
+        }      
+         // move left
+        for (int i=9;i>=0;i--){
+            setLocation(i,5);
+            Greenfoot.delay(10);
+        }      
+              // move Forward
+        for (int i=5;i>=0;i--){
+            setLocation(0,i);
+            Greenfoot.delay(10);
+        }   
+           Greenfoot.delay(20);
+           returnToSeat();
     }
      /**
      * myHobby is one of the interfaces provided.  
