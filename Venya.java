@@ -99,27 +99,27 @@ public class Venya extends Student implements SpecialInterestOrHobby
     public void circleClass(){
         setLocation(0,0);
          Greenfoot.delay(10);
-        // move right
+        // move left
         for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
+            setLocation(i,3);
+            Greenfoot.delay(2);
         }
         // move back
         for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
+            setLocation(i,8);
+            Greenfoot.delay(5);
+        }
               // move Forward
         for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
+            setLocation(5,i);
+            Greenfoot.delay(9);
+        }
+
+        for (int i=1;i<=9;i++){
+            setLocation(5,i);
+            Greenfoot.delay(2);
+        }
+           Greenfoot.delay(10);
            returnToSeat();
     }
      /**

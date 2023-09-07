@@ -146,27 +146,31 @@ public class Classroom extends World
     private void prepare()
     {
         createDeskLayout();
-        
-        
+
+
         // Each student needs to create their specific instance following the KilgoreTrout example.
         // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
         // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
-        
+
+        Venya venya = new Venya();
+        addObject(venya,6,6);
+        venya.assignSeat();
+
         ShreyaShingare shreyashingare = new ShreyaShingare();
         addObject(shreyashingare,5,6);
         shreyashingare.assignSeat();
-  
+
         RiaKanwar riakanwar = new RiaKanwar();
         addObject(riakanwar,8,7);
         riakanwar.assignSeat();
-        
+
         JasmineDhaliwal jasminedhaliwal = new JasmineDhaliwal();
         addObject(jasminedhaliwal,9,6);
         jasminedhaliwal.assignSeat();
-        
+
         NakulSoneji nakulsoneji = new NakulSoneji();
         addObject(nakulsoneji,5,10);
         nakulsoneji.assignSeat();
@@ -189,26 +193,26 @@ public class Classroom extends World
         TvishaRanjan tvisharanjan = new TvishaRanjan();
         addObject(tvisharanjan,9,10);
         tvisharanjan.assignSeat();
-        
+
         WilliamHan williamhan = new WilliamHan();
         addObject(williamhan,2,7);
         williamhan.assignSeat();
         SajeevMagesh sajeevmagesh = new SajeevMagesh();
         addObject(sajeevmagesh,6,4);
         sajeevmagesh.assignSeat();
-        
+
         AarushShetty aarushshetty = new AarushShetty();
         addObject(aarushshetty,5,4);
         aarushshetty.assignSeat();
-        
+
         PingyaoLiu pingyaoLiu = new PingyaoLiu();
         addObject(pingyaoLiu,6,3);
         pingyaoLiu.assignSeat();
-        
+
         LukasSomwong lukassomwong = new LukasSomwong();
         addObject(lukassomwong,5,7);
         lukassomwong.assignSeat();
-        
+
         Student thamansuggala = new ThamanSuggala();
         addObject(thamansuggala,3,3);
         thamansuggala.assignSeat();
@@ -223,11 +227,11 @@ public class Classroom extends World
         Vyas vyas = new Vyas();
         addObject(vyas, 8,9);
         vyas.assignSeat();
-        
+
         JainLaksh lakshjain = new JainLaksh();
         addObject(lakshjain, 8, 4);
         lakshjain.assignSeat();
-        
+
         SidShastri sidshastri = new SidShastri();
         addObject(sidshastri, 5, 3);
         sidshastri.assignSeat();
@@ -236,10 +240,10 @@ public class Classroom extends World
         StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
         StudentDeskGroup.getCurrentStudents(getObjects(Student.class), 7);
-        
+
         //Test Anwesha, Jasmine, Ria, Lokesh meetTable method
-        
-        StudentDeskGroup.meetTable(getAllStudents(), 3); 
+
+        StudentDeskGroup.meetTable(getAllStudents(), 3);
         // Test Rohan V, xxxx, xxxx, xxxx
         // Table method to get a random student and highlight their name
         //StudentDeskGroup.chooseRandomStudentAndHighlight(this);
@@ -250,8 +254,8 @@ public class Classroom extends World
        return s;
     }
     
-    
-  
+
+
     /**
      * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
      * 
