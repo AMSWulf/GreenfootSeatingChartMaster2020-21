@@ -181,7 +181,8 @@ public class Classroom extends World
         HarmanSandhu harmansandhu = new HarmanSandhu();
         addObject(harmansandhu, 6, 9);
         SathviKumar satvikumar = new SathviKumar();
-        addObject(satvikumar, 3, 7);
+        addObject(satvikumar, 1, 7);
+        sathvikkumar.assignSeat();
         ManningWu manningwu = new ManningWu();
         addObject(manningwu,3,7);
         manningwu.assignSeat();
