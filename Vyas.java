@@ -12,23 +12,22 @@ public class Vyas extends Student
         lastName = l;
         mySeatX = r;
         mySeatY = s;
-        portraitFile = "Springtrapicon.jpg";
+        portraitFile = "vyasgupta.jpg";
         soundFile = "fnafjumpscare.wav";
         setImage(portraitFile);
         sitting = true;
-        setLocation(mySeatX, mySeatY);
-        returnToSeat();
+        setLocation(8, 9);
+
     }
 
     public Vyas() {
         mySeatX = 2;
         mySeatY = 1;
-        portraitFile = "Springtrapicon.jpg";
+        portraitFile = "vyasgupta.jpg";
         soundFile = "fnafjumpscare.wav";
         setImage(portraitFile);
         sitting = true;
-        setLocation(mySeatX, mySeatY);
-        returnToSeat();
+        setLocation(8,9);
     }
 
     public void act() {
@@ -37,7 +36,8 @@ public class Vyas extends Student
         if (Greenfoot.mouseClicked(this)) {
             sitting = false;
             sayName(soundFile);
-
+            
+            getName();
             // Show the jumpscare image
             setImage("jumpscare3.jpg"); // Set the image to the jumpscare image
 
@@ -54,7 +54,7 @@ public class Vyas extends Student
             if (jumpscareDuration <= 0) {
                 // Hide the jumpscare image
                 setImage(portraitFile);
-                setLocation(mySeatX, mySeatY); // Reset the location
+                setLocation(8, 9); // Reset the location
                 jumpscareVisible = false;
             }
         }
