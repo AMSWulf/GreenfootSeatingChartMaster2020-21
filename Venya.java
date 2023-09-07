@@ -108,13 +108,13 @@ public class Venya extends Student implements SpecialInterestOrHobby
         for (int i=1;i<=5;i++){
             setLocation(i,8);
             Greenfoot.delay(5);
-        }         
+        }
               // move Forward
         for (int i=5;i>=0;i--){
             setLocation(5,i);
             Greenfoot.delay(9);
-        }   
-        
+        }
+
         for (int i=1;i<=9;i++){
             setLocation(5,i);
             Greenfoot.delay(2);
