@@ -217,6 +217,11 @@ public class Classroom extends World
         joshzeng.assignSeat();
         RohanVij rohanvij = new RohanVij();
         addObject(rohanvij, 9, 9);
+
+
+        Vyas vyas = new Vyas();
+        addObject(vyas, 8,9);
+        vyas.assignSeat();
         
         JainLaksh lakshjain = new JainLaksh();
         addObject(lakshjain, 8, 4);
