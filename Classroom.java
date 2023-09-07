@@ -226,6 +226,10 @@ public class Classroom extends World
         JainLaksh lakshjain = new JainLaksh();
         addObject(lakshjain, 8, 4);
         lakshjain.assignSeat();
+        
+        SidShastri sidshastri = new SidShastri();
+        addObject(sidshastri, 5, 3);
+        sidshastri.assignSeat();
 
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
