@@ -63,10 +63,10 @@ public class ImaadAdeel extends Student implements SpecialInterestOrHobby
                 //sayName(soundFile);
                 World world;
                 world = getWorld();
-                world.addObject(new balloon(),1,1);        
-                world.addObject(new balloon(),3,1);        
-                world.addObject(new balloon(),7,1);        
-                world.addObject(new balloon(),11,1);  
+                //world.addObject(new balloon(),1,1);        
+                //world.addObject(new balloon(),3,1);        
+                //world.addObject(new balloon(),7,1);        
+                //world.addObject(new balloon(),11,1);  
 
             
                 myHobby("I like to time travel!");
