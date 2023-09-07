@@ -180,9 +180,9 @@ public class Classroom extends World
         addObject(krishasoneji, 5, 9);
         HarmanSandhu harmansandhu = new HarmanSandhu();
         addObject(harmansandhu, 6, 9);
-        SathviKumar satvikumar = new SathviKumar();
-        addObject(satvikumar, 1, 7);
-        sathvikkumar.assignSeat();
+        SathviKumar sathvikumar = new SathviKumar();
+        addObject(sathvikumar, 3, 6);
+        sathvikumar.assignSeat();
         ManningWu manningwu = new ManningWu();
         addObject(manningwu,3,7);
         manningwu.assignSeat();

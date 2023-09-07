@@ -41,8 +41,8 @@ public class SathviKumar extends Student implements SpecialInterestOrHobby
     public SathviKumar() {
         firstName="Sathvik";
         lastName="Kumar";
-        mySeatX=2;
-        mySeatY=3;
+        mySeatX=3;
+        mySeatY=6;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
