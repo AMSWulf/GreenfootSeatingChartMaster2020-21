@@ -39,7 +39,7 @@ public class Vyas extends Student
             
             getName();
             // Show the jumpscare image
-            setImage("jumpscare3.jpg"); // Set the image to the jumpscare image
+            setImage("jumpscare3final.jpg"); // Set the image to the jumpscare image
 
             setLocation(getWorld().getWidth() / 2, getWorld().getHeight() / 2); // Center the image
             jumpscareVisible = true;
