@@ -41,8 +41,8 @@ public class LokeshKamanboina extends Student implements SpecialInterestOrHobby
     public LokeshKamanboina() {
         firstName="Lokesh";
         lastName="Kamanboina";
-        mySeatX=1;
-        mySeatY=1;
+        mySeatX=8;
+        mySeatY=6;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
