@@ -239,6 +239,10 @@ public class Classroom extends World
         SidShastri sidshastri = new SidShastri();
         addObject(sidshastri, 5, 3);
         sidshastri.assignSeat();
+        
+        PratheekPala pratheekpala = new PratheekPala();
+        addObject(pratheekpala,6,7);
+        pratheekpala.assignSeat();
 
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
