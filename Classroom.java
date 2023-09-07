@@ -158,6 +158,10 @@ public class Classroom extends World
         Venya venya = new Venya();
         addObject(venya,6,6);
         venya.assignSeat();
+     
+        LokeshKamanboina lokesh = new LokeshKamanboina();
+        addObject(lokesh, 8, 6);
+        lokesh.assignSeat();
 
         ShreyaShingare shreyashingare = new ShreyaShingare();
         addObject(shreyashingare,5,6);
