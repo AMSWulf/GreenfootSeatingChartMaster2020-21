@@ -40,11 +40,11 @@ public class Vyas extends Student
             getName();
 
             // Show the jumpscare image
-            GifImage myGif = new GifImage("jumpscare3.gif");
+            /*GifImage myGif = new GifImage("jumpscare3.gif");
             setImage(myGif.getCurrentImage());
             setLocation(getWorld().getWidth() / 2, getWorld().getHeight() / 2); // Center the image
             jumpscareVisible = true;
-            jumpscareDuration = 480; // Reset the jumpscare duration
+            jumpscareDuration = 480; // Reset the jumpscare duration */
         }
 
         // Check if the jumpscare is visible
