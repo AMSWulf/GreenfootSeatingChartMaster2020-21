@@ -251,6 +251,10 @@ public class Classroom extends World
         PratheekPala pratheekpala = new PratheekPala();
         addObject(pratheekpala,6,7);
         pratheekpala.assignSeat();
+     
+        ShreyValia shreyvalia = new ShreyValia();
+        addObject(shreyvalia,3,6);
+        shreyvalia.assignSeat();
 
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
