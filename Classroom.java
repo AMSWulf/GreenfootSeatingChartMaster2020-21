@@ -252,13 +252,13 @@ public class Classroom extends World
         addObject(pratheekpala,6,7);
         pratheekpala.assignSeat();
      
-        ShreyValia shreyvalia = new ShreyValia();
-        addObject(shreyvalia,3,6);
-        shreyvalia.assignSeat();
+        // ShreyValia shreyvalia = new ShreyValia();
+        // addObject(shreyvalia,3,6);
+        // shreyvalia.assignSeat();
 
-        SarvabatlaAnil anil = new SarvabatlaAnil();
-        addObject(anil, 8,10);
-        anil.assignSeat();
+        // SarvabatlaAnil anil = new SarvabatlaAnil();
+        // addObject(anil, 8,10);
+        // anil.assignSeat();
 
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
