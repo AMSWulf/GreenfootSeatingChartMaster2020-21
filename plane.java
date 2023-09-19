@@ -12,6 +12,9 @@ public class plane extends FlyingObjects
      * Act - do whatever the plane wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public plane(){
+        setImage("airplane.png");
+    }
     /*public void act()
     {
         // Add your action code here.
