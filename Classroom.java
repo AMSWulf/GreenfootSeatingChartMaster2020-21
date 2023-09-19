@@ -201,6 +201,10 @@ public class Classroom extends World
         TvishaRanjan tvisharanjan = new TvishaRanjan();
         addObject(tvisharanjan,9,10);
         tvisharanjan.assignSeat();
+     
+        ChungChristopher chungchristopher = new ChungChristopher(); 
+        addObject(chungchristopher, 9, 4);
+        chungchristopher.assignSeat();
 
         WilliamHan williamhan = new WilliamHan();
         addObject(williamhan,2,7);
