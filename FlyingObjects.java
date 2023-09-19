@@ -25,11 +25,11 @@ public class FlyingObjects extends Actor
             onBottom=CheckBottom();
         }
         if(onBottom){
-            getWorld().removeObject(this);
+            getWorld().removeObjects(getWorld().getObjects(Emirates.class));
         }
     }
     public boolean CheckBottom(){
-        if(getX()>14){
+        if(getX()>10){
             return true;
         }
         else{
