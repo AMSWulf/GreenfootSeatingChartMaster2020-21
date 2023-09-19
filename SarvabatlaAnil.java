@@ -26,9 +26,8 @@ public class SarvabatlaAnil extends Student
             myHobby();
             World world;
             world = getWorld();
-            world.addObject(new plane(),1,2);        
-            world.addObject(new F16(),1,5);        
-            world.addObject(new Sukhoisu35(),1,7);        
+            world.addObject(new Emirates(),1,1);        
+            world.addObject(new Emirates(),1,6);        
             world.addObject(new Emirates(),1,10);               
     }
    }
