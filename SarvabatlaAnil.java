@@ -13,7 +13,7 @@ public class SarvabatlaAnil extends Student
      // * the 'Act' or 'Run' button gets pressed in the environment.
      // */
     public SarvabatlaAnil(){
-        portraitFile = "AnilSarvabatla.jpg";
+        portraitFile = "AnilSarvabatla1.jpg";
         setImage(portraitFile);
         
     }
