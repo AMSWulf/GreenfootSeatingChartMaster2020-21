@@ -32,7 +32,7 @@ public class RiaKanwar extends Student implements StudentAthlete
         portraitFile = f.toLowerCase() + l.toLowerCase() + ".jpg";
         standingFile = firstName.toLowerCase() + lastName.toLowerCase() + "-standing.jpg";
         // Make sure to name your sound files firstlast.wav, all lowercase!!!
-        soundFile = f.toLowerCase() + l.toLowerCase()+".wav";
+        soundFile = f + l+".wav";
         setImage(portraitFile);
         sitting=true;
     }
@@ -50,7 +50,7 @@ public class RiaKanwar extends Student implements StudentAthlete
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
         portraitFile = firstName.toLowerCase() + lastName.toLowerCase() + ".jpg";
         standingFile = firstName.toLowerCase() + lastName.toLowerCase() + "-standing.jpg";
-        soundFile = firstName.toLowerCase() + lastName.toLowerCase() + ".wav";
+        soundFile = firstName + lastName + ".wav";
         setImage(portraitFile);
         sitting=true;
     }
