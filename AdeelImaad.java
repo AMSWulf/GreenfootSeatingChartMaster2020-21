@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class ImaadAdeel extends Student implements SpecialInterestOrHobby
+public class AdeelImaad extends Student implements SpecialInterestOrHobby
 {
 
     /**
@@ -22,7 +22,7 @@ public class ImaadAdeel extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public ImaadAdeel(String f, String l, int r, int s) {
+    public AdeelImaad(String f, String l, int r, int s) {
         portraitFile="ImaadAdeel.png";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
         soundFile="ImaadAdeel.wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
@@ -32,7 +32,7 @@ public class ImaadAdeel extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public ImaadAdeel() {
+    public AdeelImaad() {
         firstName="Imaad";
         lastName="Adeel";
         mySeatX=1;
@@ -53,10 +53,10 @@ public class ImaadAdeel extends Student implements SpecialInterestOrHobby
                 //sayName(soundFile);
                 World world;
                 world = getWorld();
-                world.addObject(new balloon(),1,1);        
-                world.addObject(new balloon(),3,1);        
-                world.addObject(new balloon(),7,1);        
-                world.addObject(new balloon(),11,1);  
+                // world.addObject(new balloon(),1,1);        
+                // world.addObject(new balloon(),3,1);        
+                // world.addObject(new balloon(),7,1);        
+                // world.addObject(new balloon(),11,1);  
 
             
                 myHobby("I like to watch videos!");
