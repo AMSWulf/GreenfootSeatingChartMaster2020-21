@@ -44,7 +44,10 @@ public class ImaadAdeel extends Student implements SpecialInterestOrHobby
         mySeatX=1;
         mySeatY=1;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-        soundFile="ImaadAdeel.wav";
+        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
+        soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
+        setImage(portraitFile);
         sitting=true;
     }
     
@@ -63,6 +66,7 @@ public class ImaadAdeel extends Student implements SpecialInterestOrHobby
                 //sayName(soundFile);
                 World world;
                 world = getWorld();
+                sayName(soundFile);
                 //world.addObject(new balloon(),1,1);        
                 //world.addObject(new balloon(),3,1);        
                 //world.addObject(new balloon(),7,1);        

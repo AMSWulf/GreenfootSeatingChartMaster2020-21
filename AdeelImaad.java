@@ -23,8 +23,8 @@ public class AdeelImaad extends Student implements SpecialInterestOrHobby
      * 
      */
     public AdeelImaad(String f, String l, int r, int s) {
-        portraitFile="ImaadAdeel.png";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
-        soundFile="ImaadAdeel.wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
+        portraitFile="imaadadeel.jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
+        soundFile="imaadadeel.wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
     }
     /**
