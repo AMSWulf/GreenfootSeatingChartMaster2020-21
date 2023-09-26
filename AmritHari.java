@@ -3,11 +3,11 @@
  public class AmritHari extends Student implements SpecialInterestOrHobby
  {
      public AmritHari(String f, String l, int r, int s) {
-         firstName - f;
+         firstName = f;
          lastName = l;
          mySeatX = r;
          mySeatY = s;
-         portraitFile = f.tolowerCase()+ l.toLowerCase()+ ".jpg";
+         portraitFile = f.toLowerCase()+ l.toLowerCase()+ ".jpg";
          standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
          soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
          setImage(portraitFile);

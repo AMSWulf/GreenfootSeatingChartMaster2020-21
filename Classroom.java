@@ -264,6 +264,13 @@ public class Classroom extends World
         addObject(anil, 8,10);
         anil.assignSeat();
 
+        // AmritHari amrit = new AmritHari();
+        // addObject(amrit, 8,4);
+        // anil.assignSeat();
+        
+        // AdeelImaad imaad = new AdeelImaad();
+        // addObject(imaad, 9,4);
+        // anil.assignSeat();
         // Test Sajeev,Pingyao,Sid,Aarush Method assignSeatsToDeskGroups()
         StudentDeskGroup.assignSeatsToDeskGroups();
         // Test Sajeev,Pingyao,Sid,Aarush Method getCurrentStudents() on table 7
